@@ -1,0 +1,2 @@
+Parking altitude (km),TLI delta-v (m/s),"TLI propellant, assumed inputs (kg)",Lunar time of flight (h),Lunar closest altitude (km),Integrator,RK4 step (s),DOP853 rtol
+185.0,3156.241908814846,24049.132451871945,72.00000000001928,109.99999994558402,DOP853 reference; own RK4 cross-check,10.0,1e-12

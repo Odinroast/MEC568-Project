@@ -1,0 +1,192 @@
+{
+  "scope": "Common Tasks 1-8 plus Task 9 / Scenario A (Apollo 11)",
+  "settings": {
+    "parking_altitude_km": 185.0,
+    "target_lunar_altitude_km": 110.0,
+    "target_arrival_time_h": 72.0,
+    "mass_before_tli_kg": 45000.0,
+    "tli_specific_impulse_s": 421.0,
+    "loi_specific_impulse_s": 314.0,
+    "captured_orbit_duration_h": 24.0,
+    "tli_guess_m_s": 3150.0,
+    "moon_phase_guess_deg": 130.0,
+    "reference_rtol": 1e-12,
+    "reference_atol": 1e-13,
+    "rk4_step_s": 10.0,
+    "convergence_steps_s": [
+      40.0,
+      20.0,
+      10.0,
+      5.0
+    ],
+    "maximum_coast_days": 6.0
+  },
+  "task2_initial_conditions": {
+    "parking_altitude_km": 185.0,
+    "parking_state_before_TLI": [
+      6563.137,
+      0.0,
+      0.0,
+      7.79315210744365,
+      45000.0
+    ],
+    "state_immediately_after_TLI": [
+      6563.137,
+      0.0,
+      0.0,
+      10.949394016258495,
+      20950.867548128055
+    ],
+    "state_columns": [
+      "x_km",
+      "y_km",
+      "vx_km_s",
+      "vy_km_s",
+      "mass_kg"
+    ],
+    "TLI_delta_v_m_s": 3156.241908814846,
+    "moon_phase_deg": 131.44884801228295,
+    "TLI_propellant_kg": 24049.132451871945,
+    "propulsion_inputs_are_illustrative_assumptions": true
+  },
+  "task3_frame_checks": {
+    "initial_position_roundtrip_error_km": 1.2862197421537486e-12,
+    "initial_velocity_roundtrip_error_km_s": 0.0,
+    "full_coast_position_roundtrip_error_km": 1.2196727485745367e-10,
+    "full_coast_velocity_roundtrip_error_km_s": 1.9860273225978185e-15,
+    "maximum_absolute_Jacobi_drift": 1.213464884131099e-10
+  },
+  "task5_baseline": {
+    "lunar_altitude_km": 109.99999994558402,
+    "time_of_flight_h": 72.00000000001928
+  },
+  "task7_verification": {
+    "V1_maximum_position_error_km": 0.00031528500335556626,
+    "V1_maximum_relative_energy_error": 4.1195640639336357e-10,
+    "V2_convergence": [
+      {
+        "step_s": 40.0,
+        "lunar_altitude_km": 109.82582870600277,
+        "time_to_closest_approach_h": 72.0000858587021,
+        "error_against_reference_km": 0.17417123958125558,
+        "altitude_change_on_halving_km": 0.16419217342217962,
+        "observed_order": 4.125457790616183
+      },
+      {
+        "step_s": 20.0,
+        "lunar_altitude_km": 109.99002087942495,
+        "time_to_closest_approach_h": 72.00000504798328,
+        "error_against_reference_km": 0.009979066159075956,
+        "altitude_change_on_halving_km": 0.00938234579643904,
+        "observed_order": 4.063777900753073
+      },
+      {
+        "step_s": 10.0,
+        "lunar_altitude_km": 109.99940322522139,
+        "time_to_closest_approach_h": 72.00000030598675,
+        "error_against_reference_km": 0.0005967203626369155,
+        "altitude_change_on_halving_km": 0.0005592111263013066,
+        "observed_order": 3.9917372125740647
+      },
+      {
+        "step_s": 5.0,
+        "lunar_altitude_km": 109.99996243634769,
+        "time_to_closest_approach_h": 72.00000001919265,
+        "error_against_reference_km": 3.7509236335608875e-05,
+        "altitude_change_on_halving_km": null,
+        "observed_order": null
+      }
+    ],
+    "V3_pass": true
+  },
+  "task8_sensitivity": {
+    "cases": [
+      {
+        "case": "Nominal",
+        "TLI_error_m_s": 0.0,
+        "phase_error_deg": 0.0,
+        "event": "closest_approach",
+        "lunar_altitude_km": 109.99999994558402,
+        "altitude_change_km": 0.0,
+        "time_to_event_h": 72.00000000001928
+      },
+      {
+        "case": "TLI -1 m/s",
+        "TLI_error_m_s": -1.0,
+        "phase_error_deg": 0.0,
+        "event": "moon_impact",
+        "lunar_altitude_km": 0.0,
+        "altitude_change_km": -109.99999994558402,
+        "time_to_event_h": 72.09229501636196
+      },
+      {
+        "case": "TLI +1 m/s",
+        "TLI_error_m_s": 1.0,
+        "phase_error_deg": 0.0,
+        "event": "closest_approach",
+        "lunar_altitude_km": 824.3019798790142,
+        "altitude_change_km": 714.3019799334302,
+        "time_to_event_h": 71.74709267170594
+      },
+      {
+        "case": "Phase -0.5 deg",
+        "TLI_error_m_s": 0.0,
+        "phase_error_deg": -0.5,
+        "event": "closest_approach",
+        "lunar_altitude_km": 1727.6121874953228,
+        "altitude_change_km": 1617.6121875497388,
+        "time_to_event_h": 72.92367808932742
+      },
+      {
+        "case": "Phase +0.5 deg",
+        "TLI_error_m_s": 0.0,
+        "phase_error_deg": 0.5,
+        "event": "moon_impact",
+        "lunar_altitude_km": 0.0,
+        "altitude_change_km": -109.99999994558402,
+        "time_to_event_h": 70.9256491602929
+      }
+    ],
+    "interpretation": "Small departure errors accumulate over a multi-day coast and change lunar encounter geometry. Tracking and midcourse corrections are needed to control arrival altitude and capture conditions. Impact cases stop at altitude zero; their event time is contact time, not an underground periapsis."
+  },
+  "task9_scenario_A": {
+    "scenario": "A - Apollo 11",
+    "LOI_delta_v_m_s": 899.7975023407498,
+    "LOI_vector_ECI_km_s": [
+      -0.21656494249391667,
+      -0.8733471079137196
+    ],
+    "state_after_LOI": [
+      -381493.6079204715,
+      60368.58482978039,
+      0.23237313500095413,
+      0.5691675260362046,
+      15642.16995543618
+    ],
+    "LOI_propellant_kg": 5308.697592691875,
+    "pre_LOI_Moon_relative_speed_km_s": 2.52887452824868,
+    "post_LOI_Moon_relative_speed_km_s": 1.6290770259079304,
+    "initial_lunar_eccentricity": 1.6733507511072045e-16,
+    "initial_lunar_specific_energy_km2_s2": -1.3269459781705135,
+    "initial_lunar_period_h": 1.9792319262757672,
+    "capture_duration_h": 24.0,
+    "minimum_captured_altitude_km": 109.93428924716227,
+    "maximum_captured_altitude_km": 110.0109068168415,
+    "historical_comparison": {
+      "source": "NASA Apollo 11 Mission Report, November 1969, Table 7-V",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf",
+      "first_capture_burn_m_s": 889.254,
+      "later_circularization_burn_m_s": 48.402240000000006,
+      "sum_of_historical_burn_magnitudes_m_s": 937.65624,
+      "model_minus_historical_first_m_s": 10.543502340749797,
+      "model_minus_historical_sum_m_s": -37.85873765925021,
+      "interpretation": "Different arrival states, target orbits, and impulsive versus finite burns prevent an exact historical match."
+    }
+  },
+  "environment": {
+    "python": "3.15.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "runtime_s": 10.056050599989248
+}

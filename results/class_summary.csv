@@ -1,0 +1,2 @@
+parking_altitude_km,TLI_delta_v_m_s,TLI_propellant_kg_assumed_mass_and_Isp,time_to_lunar_closest_approach_h,lunar_closest_approach_altitude_km,integrators,RK4_step_s,DOP853_rtol
+185.0,3156.241908814846,24049.132451871945,72.00000000001928,109.99999994558402,DOP853 reference; own RK4 comparison,10.0,1e-12

@@ -1,0 +1,6 @@
+case,TLI_error_m_s,phase_error_deg,event,lunar_altitude_km,altitude_change_km,time_to_event_h
+Nominal,0.0,0.0,closest_approach,109.99999994558402,0.0,72.00000000001928
+TLI -1 m/s,-1.0,0.0,moon_impact,0.0,-109.99999994558402,72.09229501636196
+TLI +1 m/s,1.0,0.0,closest_approach,824.3019798790142,714.3019799334302,71.74709267170594
+Phase -0.5 deg,0.0,-0.5,closest_approach,1727.6121874953228,1617.6121875497388,72.92367808932742
+Phase +0.5 deg,0.0,0.5,moon_impact,0.0,-109.99999994558402,70.9256491602929
